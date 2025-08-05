@@ -23,7 +23,7 @@
     <style>
       :root {
         --primary: #a97458;
-        --bg: #0d0700;
+        --bg: #1e1e1e;
       }
       * {
         margin: 0;
@@ -119,21 +119,22 @@
       }
       .landing .content {
         width: 35rem;
-        margin-left: 3rem;
+        margin-left: 5rem;
       }
       .landing .content .title {
         font-size: 4rem;
         line-height: 4rem;
+        text-shadow: 1px 1px 3px black;
       }
       .landing .content p {
         font-weight: 100;
         margin: 0.6rem 0;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
       }
       .landing .content .cta {
         display: inline-block;
         background-color: var(--primary);
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         margin-top: 2rem;
         border: 1px solid black;
         padding: 1rem 2rem;
@@ -141,11 +142,15 @@
         box-shadow: 1px 1px 3px black;
       }
       /* About */
-      .about {
+      .about,
+      .menu,
+      .contact {
         min-height: 100vh;
         padding: 7rem 5% 1rem;
       }
-      .about h1 {
+      .about h1,
+      .menu h1,
+      .contact h1 {
         text-align: center;
         font-size: 2.4rem;
         margin-bottom: 2rem;
@@ -159,7 +164,7 @@
       .about .row .about-img {
         flex: 1 1 45rem;
       }
-      .about .row .about-img img{
+      .about .row .about-img img {
         width: 100%;
       }
       .about .row .content {
@@ -167,18 +172,66 @@
         max-width: 40rem;
         flex: 1 1 35rem;
       }
-      .about .row .content h3{
+      .about .row .content h3 {
         font-size: 1.6rem;
       }
-      .about .row .content h3 span{
+      .about .row .content h3 span {
         color: var(--primary);
       }
-      .about .row .content p{
+      .about .row .content p {
         font-weight: 100;
         font-size: 1.4rem;
         margin-top: 1.6rem;
         line-height: 1.6rem;
       }
+      /* Menu */
+      .menu .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        column-gap: 4rem;
+      }
+      .menu .row .menu-card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: 0.5rem;
+        width: 17rem;
+        height: 20rem;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7),
+          -5px -5px 10px rgba(255, 255, 255, 0.06);
+        padding: 1.6rem;
+      }
+      .menu-card img {
+        align-self: center;
+        width: 7rem;
+      }
+      .menu-card .menu-name {
+        text-align: center;
+        margin-top: 1.3rem;
+        font-size: 1.3rem;
+      }
+      .menu-card .menu-price {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary);
+        font-family: sans-serif;
+        padding: 8px;
+        font-size: 1.3rem;
+        border-radius: 0 8px 0 8px;
+      }
+      .menu-card .add-cart {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: var(--primary);
+        padding: 0.4rem;
+        border-radius: 0.5rem 0 0.5rem 0;
+        cursor: pointer;
+      }
+      /* Contact */
 
       /* Media Queries */
       /* Laptop */
@@ -211,10 +264,10 @@
           color: #0d0700;
           margin: 1rem 2rem;
         }
-        .about .row{
+        .about .row {
           flex-wrap: wrap;
         }
-        .about .row .about-img img{
+        .about .row .about-img img {
           object-fit: cover;
         }
       }
@@ -278,7 +331,80 @@
         </div>
       </div>
     </section>
-    
+
+    <!-- Ini Menunya -->
+    <section id="menu" class="menu">
+      <h1><span>Menu</span> Kami</h1>
+      <div class="row">
+        <div class="menu-card">
+          <img src="img/1.png" alt="Americano" />
+          <h3 class="menu-name">Americano</h3>
+          <div class="menu-price">18k</div>
+          <div class="add-cart"><i data-feather="plus"></i></div>
+        </div>
+        <div class="menu-card">
+          <img src="img/2.png" alt="Espresso" />
+          <h3 class="menu-name">Espresso</h3>
+          <div class="menu-price">18k</div>
+          <div class="add-cart"><i data-feather="plus"></i></div>
+        </div>
+        <div class="menu-card">
+          <img src="img/3.png" alt="Iced Matcha" />
+          <h3 class="menu-name">Iced Matcha</h3>
+          <div class="menu-price">18k</div>
+          <div class="add-cart"><i data-feather="plus"></i></div>
+        </div>
+        <div class="menu-card">
+          <img src="img/4.png" alt="Iced Latte" />
+          <h3 class="menu-name">Iced Latte</h3>
+          <div class="menu-price">18k</div>
+          <div class="add-cart"><i data-feather="plus"></i></div>
+        </div>
+        <div class="menu-card">
+          <img src="img/5.png" alt="Iced Americano" />
+          <h3 class="menu-name">Iced Americano</h3>
+          <div class="menu-price">18k</div>
+          <div class="add-cart"><i data-feather="plus"></i></div>
+        </div>
+        <div class="menu-card">
+          <img src="img/6.png" alt="Iced White Coffee" />
+          <h3 class="menu-name">Iced White Coffee</h3>
+          <div class="menu-price">18k</div>
+          <div class="add-cart"><i data-feather="plus"></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak kamiiiiii -->
+    <section id="contact" class="contact">
+      <h1><span>Kontak</span> Kami</h1>
+      <div class="row">
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d363.54507536766033!2d112.75063905420096!3d-7.278570720624534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbc57d2586ed%3A0x2f3d3d73bc9ca9a7!2sJl.%20Gubeng%20Kertajaya%20II%20No.24%2C%20Kertajaya%2C%20Kec.%20Gubeng%2C%20Surabaya%2C%20Jawa%20Timur%2060282!5e0!3m2!1sid!2sid!4v1754403491609!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <form action="">
+          <div class="input-grup">
+            <i data-feather="user"></i>
+            <input type="text" placeholder="Nama">
+          </div>
+          <div class="input-grup">
+            <i data-feather="mail"></i>
+            <input type="text" placeholder="Email">
+          </div>
+          <div class="input-grup">
+            <i data-feather="phone"></i>
+            <input type="text" placeholder="No. telp">
+          </div>
+          <button class="btn">Kirim Send</button>
+        </form>
+      </div>
+    </section>
+
     <!-- icons -->
     <script>
       feather.replace();
